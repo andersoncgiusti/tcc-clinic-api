@@ -1,0 +1,32 @@
+{
+  "name": "tcc",
+  "version": "1.0.0",
+  "description": "API TCC",
+  "author": "Anderson Giusti",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^13.3.4",
+    "@sendgrid/mail": "^7.7.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.5",
+    "nodemailer-express-handlebars": "^5.0.0",
+    "path": "^0.12.7",
+    "routes": "^2.1.0",
+    "sequelize": "^6.19.0"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "mongoose": "^6.3.5"
+  }
+}

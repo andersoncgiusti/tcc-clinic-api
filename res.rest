@@ -1,0 +1,454 @@
+### 
+GET http://localhost:3000/api/project
+###
+###
+GET http://localhost:3000/api/project/632e077cbb7947ff446a2709
+###
+###
+POST http://localhost:3000/api/cash 
+Content-Type: application/json
+
+{
+    "_id": "6334ab53981b14a6d5babab3",
+    "sessions": "10",
+    "value": "10",
+    "pay": "dinheiro",    
+    "total": "100"
+}
+###
+### 
+PUT http://localhost:3000/api/user/6334ab53981b14a6d5babab3
+Content-Type: application/json
+
+{
+    "userName"      : "Bruno aaaaaaa",
+    "userLastName"  : " Carvalho Giusti",
+    "userBirth"     : "26121989",
+    "userPhone"     : "1124814222",
+    "userEmail"     : "anderson.giusti12@gmail.com",
+    "userCpf"       : "37593539831",
+    "userAddress"   : "Avenida Odair Santanelli",
+    "userNumber"    : "990",
+    "userComplement": "Bloco 15 Apto B14",
+    "userCity"      : "Guarulhos",
+    "userState"     : "SP",
+    "userPermission": "paciente",
+    "password"      : "123"
+}
+
+###
+### 
+PUT http://localhost:3000/api/project/632e0c0c6e10219da354bc4c
+Content-Type: application/json
+
+{
+    "title": "TESTE 1",
+    "description": "TESTANDO RELACINAMENTO",
+    "tasks": [
+        {
+            "title": "array 1"
+        }
+    ]
+}
+
+###
+### 
+DELETE http://localhost:3000/api/user/6334ab53981b14a6d5babab3
+###
+### 
+GET http://localhost:3000/api/userPacient
+###
+### 
+GET http://localhost:3000/api/user
+###
+### 
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+    "userName"      : "Teste 10000",
+    "userLastName"  : " Carvalho Giusti",
+    "userBirth"     : "26/12/1989",
+    "userPhone"     : "11 99249-9734",
+    "userEmail"     : "100000@hotmail.com",
+    "userCpf"       : "37593539830",
+    "userAddress"   : "Avenida Odair Santanelli",
+    "userNumber"    : "990",
+    "userComplement": "Bloco 15 Apto B14",
+    "userCity"      : "Guarulhos",
+    "userState"     : "SP",
+    "userPermission": "paciente",
+    "prontuarios": [
+        {
+            "treatment": "aaaaaa"
+        }
+    ]
+}
+   
+###
+### 
+PUT http://localhost:3000/api/user/63344ecc8d3a206530c69d8e
+Content-Type: application/json
+
+{    
+    "prontuarios": [
+        {
+            "treatment": "aaaaaaaaaaaaa"
+        }
+    ]
+}
+###
+### 
+DELETE http://localhost:3000/api/user/629e970dbe638658a42f7533
+###
+### 
+DELETE http://localhost:3000/api/project/632e0623c444ecd0d93cd867
+###
+### 
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+    "userName"      : "Anderson Outlook",
+    "userLastName"  : " Carvalho Giusti",
+    "userBirth"     : "26121989",
+    "userPhone"     : "11992499734",
+    "userEmail"     : "anderson_cg12@hotmail.com",
+    "userCpf"       : "37593539830",
+    "userAddress"   : "Avenida Odair Santanelli",
+    "userNumber"    : "990",
+    "userComplement": "Bloco 15 Apto B14",
+    "userCity"      : "Guarulhos",
+    "userState"     : "SP",
+    "userPermission": "paciente"
+}
+   
+###
+### 
+PUT http://localhost:3000/api/userChart/6334ab53981b14a6d5babab3
+Content-Type: application/json
+
+{    
+    "treatment": "delete Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis, leo ut scelerisque mattis, risus mauris vestibulum tellus, eget convallis felis purus ac lectus. Aliquam aliquam posuere elit non tincidunt. Nam accumsan nulla sed dui auctor, ut porttitor ex convallis. Suspendisse vehicula hendrerit orci. Morbi sodales eu libero interdum aliquet. Aenean mi est, vulputate nec efficitur ac, lacinia venenatis tellus. Cras sed libero eu felis rutrum hendrerit. Nulla scelerisque quis enim sollicitudin facilisis. Proin sed urna nec dolor ornare congue porttitor bibendum felis. Morbi eget libero a elit ullamcorper congue. Aliquam placerat vestibulum nibh, id luctus felis porttitor quis."
+}
+###
+### 
+GET http://localhost:3000/api/userPacient
+###
+### prontuario getAll
+POST http://localhost:3000/api/prontuario
+Content-Type: application/json
+
+{    
+    "user": "634ded7b4368bde290802a35",
+    "treatment": "teste Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis, leo ut scelerisque mattis, risus mauris vestibulum tellus, eget convallis felis purus ac lectus. Aliquam aliquam posuere elit non tincidunt. Nam accumsan nulla sed dui auctor, ut porttitor ex convallis. Suspendisse vehicula hendrerit orci. Morbi sodales eu libero interdum aliquet. Aenean mi est, vulputate nec efficitur ac, lacinia venenatis tellus. Cras sed libero eu felis rutrum hendrerit. Nulla scelerisque quis enim sollicitudin facilisis. Proin sed urna nec dolor ornare congue porttitor bibendum felis. Morbi eget libero a elit ullamcorper congue. Aliquam placerat vestibulum nibh, id luctus felis porttitor quis."
+
+}
+### prontuario 
+GET http://localhost:3000/api/prontuario/6334ab53981b14a6d5babab3
+###
+POST http://localhost:3000/api/cash 
+Content-Type: application/json
+
+{
+    "sessions": "10",
+    "value": "100",
+    "pay": "debito",    
+    "total": "1000",
+    "user": "634ded7b4368bde290802a35"
+}
+###
+###
+GET http://localhost:3000/api/cash
+###
+###
+DELETE http://localhost:3000/api/cash/6342e380c3c514e93c49f1e7
+###
+### 
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+    "userName"      : "Anderson",
+    "userLastName"  : " Carvalho Giusti",
+    "userBirth"     : "26121989",
+    "userPhone"     : "11992499734",
+    "userEmail"     : "anderson.giusti12@gmail.com",
+    "userCpf"       : "37593539830",
+    "userAddress"   : "Avenida Odair Santanelli",
+    "userNumber"    : "990",
+    "userComplement": "Bloco 15 Apto B14",
+    "userCity"      : "Guarulhos",
+    "userState"     : "SP",
+    "userPermission": "administrador",
+    "password"      : "and123"
+}
+   
+###
+### agendamento post
+POST http://localhost:3000/api/agendamento
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYWQxYThlNzJlN2M5MTY3MWM5ZGZjNyIsImlhdCI6MTY1NTUxMTg5OCwiZXhwIjoxNjU1NTk4Mjk4fQ.wC95-bEcm78uOkIVXmOxD6gakSRl8U-F0xrnwiOdWpo
+
+Content-Type: application/json
+
+{
+    "scheduleTitle": "Ana",
+    "scheduleStartTime": "Sat Jan 01 2022 07:00:00 GMT-0300 (Hora padrão de Brasília)",
+    "scheduleEndTime": "Sat Jan 01 2022 08:00:00 GMT-0300 (Hora padrão de Brasília)",
+    "user": "634ded7b4368bde290802a35"
+}
+###
+### agendamento put
+PUT http://localhost:3000/api/agendamento/634f4d696e8a13a776a9feaa
+Content-Type: application/json
+
+{
+    "scheduleTitle": "Ana teste email",
+    "scheduleStartTime": "2022-10-20T10:00:00.000Z",
+    "scheduleEndTime": "2022-10-20T11:00:00.000Z",
+    "user": "634ded7b4368bde290802a35"
+}
+###
+GET  http://localhost:3000/api/agendamento/
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYWQxYThlNzJlN2M5MTY3MWM5ZGZjNyIsImlhdCI6MTY1NTUxMTg5OCwiZXhwIjoxNjU1NTk4Mjk4fQ.wC95-bEcm78uOkIVXmOxD6gakSRl8U-F0xrnwiOdWpo
+
+###
+DELETE   http://localhost:3000/api/agendamento/634f4c1602adcdf17d3f264e
+Content-Type: application/json
+
+{
+    "_id": "634f4c1602adcdf17d3f264e"
+}
+###
+DELETE   http://localhost:3000/api/user/636d4c723b5bfef5dbdf13ca
+###
+### register password
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+    "password": "And261289!"
+}
+###
+### authenticate
+POST http://localhost:3000/api/authenticate
+Content-Type: application/json
+
+{
+    "email": "anderson_cg12@hotmail.com",
+    "password": "And261289!"
+}
+###
+### new passwpord
+POST http://localhost:3000/api/forgot_password
+Content-Type: application/json
+
+{
+    "userEmail": "anderson_cg12@hotmail.com"
+}
+###
+### reset password
+POST http://localhost:3000/api/reset_password
+Content-Type: application/json
+
+{
+    "userEmail": "anderson_cg12@hotmail.com",
+    "token": "aaaa69b6e6cad9a72cc1a135ba61e6965c8ba7f29d1a",
+    "userPassword": "123456"
+}
+###
+POST http://localhost:3000/api/user_password
+Content-Type: application/json
+
+{    
+    "_id"      : "6356ea69ab8e3e2745ca8ef3",
+    "password" : "123456"
+}
+   
+###
+PUT http://localhost:3000/api/user_password
+Content-Type: application/json
+
+{    
+    "_id"      : "6334ab53981b14a6d5babab3",
+    "password" : "12345"
+}
+   
+###
+###
+POST http://localhost:3000/api/user_authenticate
+Content-Type: application/json
+
+{    
+    "userEmail": "anderson.giusti12@gmail.com",
+    "password" : "37593539830"
+}
+   
+###
+POST http://localhost:3000/api/userCpf
+Content-Type: application/json
+
+{    
+    "userCpf": "11111111111"
+}
+###
+GET  http://localhost:3000/api/user
+###
+GET  http://localhost:3000/api/cash 
+###
+GET  http://localhost:3000/api/agendamento 
+###
+GET  http://localhost:3000/api/agendamento/6334ab53981b14a6d5babab3
+
+###
+###
+POST http://localhost:3000/api/user_authenticate
+Content-Type: application/json
+
+{    
+    "userEmail": "anderson.giusti12@gmail.com",
+    "password" : "123456"
+}
+   
+###
+GET  http://localhost:3000/api/status 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMzRhYjUzOTgxYjE0YTZkNWJhYmFiMyIsImlhdCI6MTY2ODAyODQ3MCwiZXhwIjoxNjY4MTE0ODcwfQ.G8anbLiK8BAeQdw0AjFBlw8NQWp6sciIobx-Aeu14Xs
+
+###
+
+###
+POST http://localhost:3000/api/user_forgot_password
+Content-Type: application/json
+
+{    
+    "userEmail": "anderson.giusti12@gmail.com"
+}
+   
+###
+###
+POST http://localhost:3000/api/user_reset_password
+Content-Type: application/json
+
+{    
+    "userEmail": "anderson.giusti12@gmail.com",
+    "token": "d6169177fa7afda18eefcc5a4217c2368e9a843e",
+    "password": "12345"
+}
+   
+###
+POST http://localhost:3000/api/prontuario
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMzRhYjUzOTgxYjE0YTZkNWJhYmFiMyIsImlhdCI6MTY2ODAyODQ3MCwiZXhwIjoxNjY4MTE0ODcwfQ.G8anbLiK8BAeQdw0AjFBlw8NQWp6sciIobx-Aeu14Xs
+
+Content-Type: application/json
+
+{
+    "idChart": "6334ab53981b14a6d5babab3",
+    "treatment": "wecwecwecwec"
+}
+###
+POST http://localhost:3000/api/session
+Content-Type: application/json
+
+{
+    "user": "6334ab53981b14a6d5babab3",
+    "sessionPatient": "10"
+}
+###
+###
+GET http://localhost:3000/api/session
+###
+###
+DELETE  http://localhost:3000/api/session/636cf2a6da839c1b2b332a80
+###
+###
+PUT http://localhost:3000/api/session/6334ab53981b14a6d5babab3
+Content-Type: application/json
+
+{
+    "sessionPatient": "10"
+}
+###
+###
+POST http://localhost:3000/api/total
+Content-Type: application/json
+
+{
+    "user": "6334ab53981b14a6d5babab3"
+}
+###
+###
+PUT http://localhost:3000/api/session_total
+Content-Type: application/json
+
+{
+    "user"          : "6356ea69ab8e3e2745ca8ef3",
+    "sessionPatient": "1"
+}
+###
+GET http://localhost:3000/api/total
+###
+PUT http://localhost:3000/api/totals
+###
+PUT http://localhost:3000/api/totals
+Content-Type: application/json
+
+{
+    "user": "6334ab53981b14a6d5babab3",
+    "sessionPatient": "1"
+}
+###
+POST http://localhost:3000/api/session_post
+Content-Type: application/json
+
+{
+    "user": "6334ab53981b14a6d5babab3"
+}
+###
+PUT http://localhost:3000/api/session_total
+Content-Type: application/json
+
+{
+    "user": "6356ea69ab8e3e2745ca8ef3",
+    "sessionPatient": "1"
+}
+###
+###
+GET http://localhost:3000/api/cash 
+###
+GET http://localhost:3000/api/session
+###
+###
+POST http://localhost:3000/api/session
+Content-Type: application/json
+
+{
+    "userName": "ANA PAULAQQ", 
+    "user": "6356ea69ab8e3e2745ca8ef3",
+    "sessionPatient": "1"
+}
+###
+PUT http://localhost:3000/api/session_total
+Content-Type: application/json
+
+{
+    "userName"      : "ANDERSON",
+    "user"          : "6377ce4de7d94943c75e2e35",
+    "sessionPatient": "1"
+}
+###
+###
+PUT  http://localhost:3000/api/session_totals/6377ce50e7d94943c75e2e3c
+###
+POST http://localhost:3000/api/user_authenticate
+Content-Type: application/json
+
+{    
+    "userEmail": "anderson.giusti12@gmail.com",
+    "password" : "123456"
+}
+   
+###
+GET  http://localhost:3000/api/status 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJhbmRlcnNvbi5naXVzdGkxMkBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzczOWM5ZjNmMmQ4MDE1YjhkMzEyOTciLCJ1c2VyUGVybWlzc2lvbiI6ImFkbWluaXN0cmFkb3IiLCJpYXQiOjE2NjkwNDE3NzksImV4cCI6MTY2OTA0NTM3OX0.CHZ4_Em6RBlFJINON8TcbVCjtMj-_AG7zAaDnHEnCZ4
+
+###
