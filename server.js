@@ -10,8 +10,8 @@ const server = http.createServer(app);
 const options = { 
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
-    // ssl: true, 
-    // sslValidate: false 
+    ssl: true, 
+    sslValidate: false 
 };
 
 mongoose.connect(process.env.DATABASE_STRING, options);
