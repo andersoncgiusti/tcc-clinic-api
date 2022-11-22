@@ -13,6 +13,10 @@ const sessionsRouter = require('./routes/sessions.router');
 
 // const projectRouter = require('./routes/project.router');
 
+app.get('/', (req, res) => {
+  res.json({ success: true })
+})
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); 
 

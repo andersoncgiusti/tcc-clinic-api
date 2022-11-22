@@ -8,7 +8,7 @@ const userController = require('../controllers/user.controller');
 router.get('/api/userPacient', checkAuth, userController.userGetPacient);
 router.get('/api/user', checkAuth, userController.userGet);
 router.get('/api/user/:id', checkAuth, userController.userGetId);
-router.post('/api/user', checkAuth, userController.userPost);
+router.post('/api/user', userController.userPost);
 router.put('/api/user/:id', checkAuth, userController.userUpdateId);
 router.put('/api/userChart/:id', checkAuth, userController.chartUpdateId);
 router.delete('/api/user/:id', checkAuth, userController.userDeleteId);
